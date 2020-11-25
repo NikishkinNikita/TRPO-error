@@ -16,6 +16,10 @@ ini_set("display_errors", 1);
 error_reporting(-1);
 
 try {
+	
+	$version = file_get_context("version.txt");
+    MyLog::log("Версия программы ".$version);
+	
     $v = array();
     for ($i = 1; $i < 4; $i++) {
         echo "Введите " . $i . " аргумент:";
